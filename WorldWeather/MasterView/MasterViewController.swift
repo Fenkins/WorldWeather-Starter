@@ -32,6 +32,7 @@ class MasterViewController: UITableViewController {
     if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
       self.clearsSelectionOnViewWillAppear = false
       self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+//        prepareNavigationBarAppearance()
     }
   }
   
@@ -81,5 +82,18 @@ class MasterViewController: UITableViewController {
     return cell
   }
   
+    /*private func prepareNavigationBarAppearance() {
+        let font = UIFont(name: "HelveticaNeue-Light", size: 30)!
+        
+        // so titleTextAttribute probably want to see the font, not some optional AnyObject stuff, so we are placing exclamation mark at the end of the line. This code looks kinda fucked up from the beginning if you ask me, what are you even smoking, Ray?
+        // more important of anything, this piece of crap is not even working. good job, Ray. I will just comment this the fuck out.
+        
+        let regularVertical = UITraitCollection(verticalSizeClass: .Regular)
+        UINavigationBar.appearanceForTraitCollection(regularVertical).titleTextAttributes = [NSFontAttributeName: font]
+        let compactVertical = UITraitCollection(verticalSizeClass: .Compact)
+        UINavigationBar.appearanceForTraitCollection(compactVertical).titleTextAttributes = [NSFontAttributeName:font.fontWithSize(20)]
+        
+    }*/
+    
 }
 

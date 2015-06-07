@@ -49,6 +49,10 @@ class WeatherTextViewController: UIViewController, CityWeatherContainer {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     configureView()
+    let traitOverride = UITraitCollection(horizontalSizeClass: .Compact)
+    for vc in childViewControllers as! [UIViewController] {
+        setOverrideTraitCollection(traitOverride, forChildViewController: vc)
+    }
   }
   
   // MARK: - Utility methods
